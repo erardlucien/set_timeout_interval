@@ -1,0 +1,75 @@
+// reset
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --font-size: 62.5%;
+    font-size: var(--font-size);
+}
+
+// custom_variables
+$primary-clr: rgb(245, 245, 245);
+$secondary-clr: rgb(10, 145, 145);
+$ternary-clr: rgb(153, 153, 153);
+$transition: 200ms transform ease-out 4ms;
+
+// container
+
+.container {
+    background-color: $primary-clr;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+
+// msg
+
+.msg {
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    background-color: $secondary-clr;
+    color: $primary-clr;
+    border: 0.4rem solid $ternary-clr;
+    border-left: none;
+    border-right: none;
+    padding: 1.2rem 1.3rem;
+    transition: $transition;
+
+    p {
+        font-size: 1.2rem;
+        color: inherit;
+    }
+}
+
+// hidden
+
+.hidden {
+    transform: translateY(-100%);
+    z-index: -99;
+}
+
+// translated
+
+.translated {
+    transform: translateY(0);
+}
+
+// showed
+
+.showed {
+    position: initial;
+    z-index: 0;
+}
