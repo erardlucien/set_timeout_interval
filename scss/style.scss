@@ -19,10 +19,11 @@ html {
 }
 
 // custom_variables
-$primary-clr: rgb(245, 245, 245);
-$secondary-clr: rgb(10, 145, 145);
-$ternary-clr: rgb(153, 153, 153);
-$transition: 200ms transform ease-out 4ms;
+$primary-clr: hsl(0, 0%, 96%);
+$secondary-clr: hsl(180, 97%, 50%);
+$ternary-clr: hsl(0, 0%, 90%);
+$black: hsl(0, 5%, 12%);
+$transition: transform var(--duration) ease-out 4ms;
 
 // container
 
@@ -40,17 +41,22 @@ $transition: 200ms transform ease-out 4ms;
     position: absolute;
     height: 20rem;
     width: 100%;
-    background-color: $secondary-clr;
+    background-image: linear-gradient(to right, $secondary-clr, $ternary-clr 45%);
     color: $primary-clr;
-    border: 0.4rem solid $ternary-clr;
+    border: 0.4rem solid $black;
     border-left: none;
     border-right: none;
     padding: 1.2rem 1.3rem;
     transition: $transition;
 
     p {
-        font-size: 1.2rem;
-        color: inherit;
+        font-size: 10.2rem;
+        text-align: center;
+        margin: 2rem auto;
+        background-image: linear-gradient(to right, $black 35%, $secondary-clr);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
 }
 
