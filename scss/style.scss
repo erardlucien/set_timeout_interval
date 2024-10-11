@@ -37,7 +37,7 @@ $transition: transform var(--duration) ease-out 4ms;
     position: absolute;
     display: flex;
     justify-content: center;
-    height: 20rem;
+    height: 14rem;
     width: 100%;
     background-image: linear-gradient(to right, $secondary-clr, $ternary-clr 45%);
     color: $primary-clr;
